@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<title>Projects - Umberto Bozzolini</title>
+<meta name="description" content="Projects by Umberto Bozzolini: Python recon tooling and a Proxmox home lab.">
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    margin: 0;
+    padding: 2.5rem 1.25rem;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background: #fafafa;
+  }
+  main { max-width: 34rem; margin: 0 auto; }
+  h1 { font-size: 1.6rem; font-weight: 600; margin: 0 0 1.5rem; letter-spacing: -0.01em; }
+  h2 { font-size: 1.05rem; font-weight: 600; margin: 2rem 0 0.5rem; }
+  p { margin: 0 0 1rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.2rem; }
+  li { margin: 0 0 0.25rem; }
+  a { color: #1a1a1a; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e8e8e8; background: #111; }
+    a { color: #e8e8e8; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Projects</h1>
+
+  <h2>Nmap tooling</h2>
+  <p>Two Python scripts written to speed up the first recon step in labs.</p>
+  <ul>
+    <li><code>nmap_scan.py</code> runs <code>nmap -sV -sC</code> against a target, saves the normal output to a file, and stops with a clear message when nmap is missing, the target does not resolve or the host does not answer ping probes.</li>
+    <li><code>nmap_parser.py</code> reads <code>-oN</code> output and prints a table of open ports with service versions, followed by NSE script output per port and per host.</li>
+  </ul>
+  <p>Code: <a href="https://github.com/3s0boz/scripts-pentesting/tree/main/utils">scripts-pentesting/utils</a></p>
+
+  <h2>Home lab</h2>
+  <p>Proxmox host running Kali Linux and Metasploitable 2, used for service enumeration drills.</p>
+
+  <nav aria-label="Site"><p><a href="/">Home</a> · <a href="/about/">About</a> · <a href="/projects/" aria-current="page">Projects</a> · <a href="/writeups/">Writeups</a> · <a href="https://github.com/3s0boz">github.com/3s0boz</a></p></nav>
+</main>
+</body>
+</html>

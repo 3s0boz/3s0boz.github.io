@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<title>Writeups - Umberto Bozzolini</title>
+<meta name="description" content="Writeups of HackTheBox machines, TryHackMe rooms and INE labs by Umberto Bozzolini.">
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    margin: 0;
+    padding: 2.5rem 1.25rem;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background: #fafafa;
+  }
+  main { max-width: 34rem; margin: 0 auto; }
+  h1 { font-size: 1.6rem; font-weight: 600; margin: 0 0 1.5rem; letter-spacing: -0.01em; }
+  h2 { font-size: 1.05rem; font-weight: 600; margin: 2rem 0 0.5rem; }
+  p { margin: 0 0 1rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.2rem; }
+  li { margin: 0 0 0.6rem; }
+  .meta { color: #555; }
+  a { color: #1a1a1a; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e8e8e8; background: #111; }
+    .meta { color: #b0b0b0; }
+    a { color: #e8e8e8; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Writeups</h1>
+  <p>55 writeups: 4 HackTheBox machines, 21 TryHackMe rooms and 30 INE labs. Real machines, Linux and a Windows AD, documented with a consistent method: reconnaissance, enumeration, exploitation, privilege escalation. No flag values are published.</p>
+
+  <h2>Selected machines</h2>
+  <ul>
+    <li><a href="https://github.com/3s0boz/ctf-writeups/tree/main/hackthebox/support">Support</a> <span class="meta">(HackTheBox, Windows AD)</span><br>SMB share leaking a .NET tool, hidden LDAP attribute, Resource-Based Constrained Delegation with Impacket to SYSTEM on the domain controller.</li>
+    <li><a href="https://github.com/3s0boz/ctf-writeups/tree/main/hackthebox/orion">Orion</a> <span class="meta">(HackTheBox, Linux)</span><br>Craft CMS deserialization to PHP session injection and RCE, cracked database hash, argument injection in a loopback telnet daemon.</li>
+    <li><a href="https://github.com/3s0boz/ctf-writeups/tree/main/hackthebox/twomillion">TwoMillion</a> <span class="meta">(HackTheBox, Linux)</span><br>JavaScript deobfuscation, broken access control to admin, command injection in the VPN generator, kernel OverlayFS exploit.</li>
+    <li><a href="https://github.com/3s0boz/ctf-writeups/tree/main/hackthebox/cap">Cap</a> <span class="meta">(HackTheBox, Linux)</span><br>IDOR exposing a packet capture with cleartext FTP credentials, password reuse, Python with <code>cap_setuid</code>.</li>
+    <li><a href="https://github.com/3s0boz/ctf-writeups/tree/main/tryhackme/bookstore">Bookstore</a> <span class="meta">(TryHackMe, Linux)</span><br>LFI in a deprecated API version, Werkzeug debugger PIN from shell history, SUID binary gated by a reversible XOR check.</li>
+    <li><a href="https://github.com/3s0boz/ctf-writeups/tree/main/tryhackme/tomghost">Tomghost</a> <span class="meta">(TryHackMe, Linux)</span><br>Ghostcat (CVE-2020-1938) file read, PGP key cracking, sudo <code>zip</code> escalation.</li>
+    <li><a href="https://github.com/3s0boz/ctf-writeups/tree/main/tryhackme/ultratech">UltraTech</a> <span class="meta">(TryHackMe, Linux)</span><br>Command injection in a Node.js API, SQLite dump and cracked credentials, root through <code>docker</code> group membership.</li>
+    <li><a href="https://github.com/3s0boz/ctf-writeups/tree/main/tryhackme/team">Team</a> <span class="meta">(TryHackMe, Linux)</span><br>Two virtual host discoveries and an LFI to an SSH key, sudo command injection, writable root cronjob.</li>
+    <li><a href="https://github.com/3s0boz/ctf-writeups/tree/main/tryhackme/jump">Jump</a> <span class="meta">(TryHackMe, Linux)</span><br>Five-level privilege escalation chain: cron-executed FTP upload, systemd PATH hijacking, writable helper script, <code>less</code> escape.</li>
+    <li><a href="https://github.com/3s0boz/ctf-writeups/tree/main/tryhackme/blog">Blog</a> <span class="meta">(TryHackMe, Linux)</span><br>WordPress user enumeration, XML-RPC credential attack, plugin RCE, custom SUID binary with a logic flaw.</li>
+    <li><a href="https://github.com/3s0boz/ctf-writeups/tree/main/tryhackme/lookup">Lookup</a> <span class="meta">(TryHackMe, Linux)</span><br>Username enumeration on a login form, vulnerable elFinder to RCE, PATH hijacking and sudo <code>look</code>.</li>
+    <li><a href="https://github.com/3s0boz/ctf-writeups/tree/main/tryhackme/fools-mate">Fools Mate</a> <span class="meta">(TryHackMe, web)</span><br>Business logic flaw: a chess API that never validates moves.</li>
+    <li><a href="https://github.com/3s0boz/ctf-writeups/tree/main/tryhackme/w1seguy">W1seGuy</a> <span class="meta">(TryHackMe, crypto)</span><br>Known-plaintext attack against a repeating-key XOR service.</li>
+  </ul>
+
+  <h2>More TryHackMe rooms</h2>
+  <p>
+    <a href="https://github.com/3s0boz/ctf-writeups/tree/main/tryhackme/anonymous">Anonymous</a> ·
+    <a href="https://github.com/3s0boz/ctf-writeups/tree/main/tryhackme/boiler-ctf">Boiler CTF</a> ·
+    <a href="https://github.com/3s0boz/ctf-writeups/tree/main/tryhackme/brute-it">Brute It</a> ·
+    <a href="https://github.com/3s0boz/ctf-writeups/tree/main/tryhackme/chocolate-factory">Chocolate Factory</a> ·
+    <a href="https://github.com/3s0boz/ctf-writeups/tree/main/tryhackme/colddbox-easy">ColddBox: Easy</a> ·
+    <a href="https://github.com/3s0boz/ctf-writeups/tree/main/tryhackme/gaming-server">GamingServer</a> ·
+    <a href="https://github.com/3s0boz/ctf-writeups/tree/main/tryhackme/kenobi">Kenobi</a> ·
+    <a href="https://github.com/3s0boz/ctf-writeups/tree/main/tryhackme/mr-robot-ctf">Mr Robot CTF</a> ·
+    <a href="https://github.com/3s0boz/ctf-writeups/tree/main/tryhackme/room-404">Room 404</a> ·
+    <a href="https://github.com/3s0boz/ctf-writeups/tree/main/tryhackme/smag-grotto">Smag Grotto</a> ·
+    <a href="https://github.com/3s0boz/ctf-writeups/tree/main/tryhackme/wgel">Wgel</a> ·
+    <a href="https://github.com/3s0boz/ctf-writeups/tree/main/tryhackme/year-of-the-rabbit">Year of the Rabbit</a>
+  </p>
+
+  <h2>INE labs (eJPT preparation)</h2>
+  <ul>
+    <li><a href="https://github.com/3s0boz/ctf-writeups/tree/main/ine/assessment-methodologies">Assessment methodologies</a> <span class="meta">(9 labs)</span></li>
+    <li><a href="https://github.com/3s0boz/ctf-writeups/tree/main/ine/system-host-penetration-testing">System and host penetration testing</a> <span class="meta">(13 labs)</span></li>
+    <li><a href="https://github.com/3s0boz/ctf-writeups/tree/main/ine/post-exploitation">Post-exploitation</a> <span class="meta">(5 labs)</span></li>
+    <li><a href="https://github.com/3s0boz/ctf-writeups/tree/main/ine/pivoting">Pivoting</a> <span class="meta">(2 labs)</span></li>
+    <li><a href="https://github.com/3s0boz/ctf-writeups/tree/main/ine/network-based-attacks">Network-based attacks</a> <span class="meta">(1 lab)</span></li>
+  </ul>
+
+  <nav aria-label="Site"><p><a href="/">Home</a> · <a href="/about/">About</a> · <a href="/projects/">Projects</a> · <a href="/writeups/" aria-current="page">Writeups</a> · <a href="https://github.com/3s0boz">github.com/3s0boz</a></p></nav>
+</main>
+</body>
+</html>
